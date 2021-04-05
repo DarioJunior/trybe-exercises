@@ -24,7 +24,6 @@ function palindromo(string) {
   }
   isPalindrome == true ? console.log(`${string} é um palindromo`) : console.log("Error.")
 }
-
 // palindromo('Arara')
 
 function indexOfHighestValue(arr) {
@@ -138,3 +137,7 @@ function checkEndWord([word, end]) {
 }
 let stringToTest = ['casamento', 'mento'];
 // checkEndWord(stringToTest);
+
+
+
+
