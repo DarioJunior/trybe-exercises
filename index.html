@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+
+      function autoCreateElements(el, cl = '') {
+        let div = document.createElement(el);
+        div.className = cl;
+        return div;
+      }
+
+      // 01.
+      let body = document.querySelector('body');
+      body.appendChild(autoCreateElements('h1', 'title'));
+      document.querySelector('h1').innerText = 'Exercício 5.2 - JavaScript DOM';
+      // 02.
+      let divMain = body.appendChild(autoCreateElements('div', 'main-content'));
+      // 03.
+      let divCenter = divMain.appendChild(autoCreateElements('div', 'center-content'));
+      // 04.
+      divCenter.appendChild(autoCreateElements('p', 'paragraph'));
+      document.querySelector('p').innerText = 'Lorem Ipsum, Lorem Ipsum, and others';
+      // 05.
+      divLeft = divMain.appendChild(autoCreateElements('div', 'left-content'));
+      // 06.
+      divRight = divMain.appendChild(autoCreateElements('div', 'right-content'));
+      // 07.
+      divRight.appendChild(autoCreateElements('img', 'small-image'));
+      let image = document.querySelector('img');
+      image.setAttribute('src', 'https://picsum.photos/200')
+      console.log(body)
+      // 08.
+      let ulOfRight = divRight.appendChild(autoCreateElements('ul'));
+      ulOfRight.appendChild(autoCreateElements('li', 'um'));
+      ulOfRight.appendChild(autoCreateElements('li', 'dois'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Três'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Quatro'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Cinco'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Seis'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Sete'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Oito'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Nove'));
+      ulOfRight.appendChild(autoCreateElements('li', 'Dez'));
+      // 09.
+      divMain.appendChild(autoCreateElements('h3', 'description'));
+      divMain.appendChild(autoCreateElements('h3', 'description'));
+      divMain.appendChild(autoCreateElements('h3', 'description'));
+      // PARTE 2
+      // 1, 2 já foi
+      // 03.
+      divMain.removeChild(divLeft)
+      // 04.
+      divRight.style.marginRight = 'auto';
+      // 05.
+      divMain.style.backgroundColor = 'green';
+      // 06.
+      ulOfRight.removeChild(ulOfRight.lastChild)
+      ulOfRight.removeChild(ulOfRight.lastChild)
+    </script>
+  </body>
+</html>
