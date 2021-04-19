@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+header {
+  width: 100vw;
+  height: 70px;
+  background-color: #323433;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.4rem;
+}
+
+header h3 {
+  color: grey;
+}
+
+.header-img {
+  width: 70px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+section:first-of-type {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+section:nth-child(3) {
+  width: 500px;
+  padding: 30px 0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section:nth-child(3) div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  height: 200px;
+
+  margin: 5px;
+
+  border-radius: 15px;
+  border-bottom: 2px solid gainsboro;
+  border-right: 2px solid gainsboro;
+}
+
+footer {
+  margin: auto;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid gainsboro;
+  padding-top: 10px;
+}
